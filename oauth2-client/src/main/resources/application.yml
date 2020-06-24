@@ -1,0 +1,21 @@
+security:
+  oauth2:
+    client:
+      clientId: cliendID
+      clientSecret: secret
+      accessTokenUri: https://urdomain.ice.ibmcloud.com/oidc/endpoint/default/token
+      userAuthorizationUri: https://urdomain.ice.ibmcloud.com/oidc/endpoint/default/authorize
+      tokenName: access_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+      scope: openid email params groups
+      auto-approve-scopes: '.*'
+    resource:
+      userInfoUri: https://urdomain.ice.ibmcloud.com/oidc/endpoint/default/userinfo
+      preferTokenInfo: false
+      
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
